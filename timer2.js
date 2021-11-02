@@ -2,6 +2,13 @@ const { stdin, stdout } = require("process");
 
 const beep = () => stdout.write('\x07');
 
+const setTimer = (time) => {
+  stdout.write(`Setting time for ${time} seconds`)
+  setTimeout(() => {
+    beep();
+  }, time * 1000);
+}
+
 const beeper = () => {
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
@@ -14,7 +21,7 @@ const beeper = () => {
 
 }
 
-const options = (input)=> {
+const options = (input) => {
   switch (input) {
     case "1":
 
@@ -47,10 +54,10 @@ const options = (input)=> {
       beep();
       break;
     case "\u0003":
-      console.log("Thanks for using me, ciao!")
+      stdout.write("Thanks for using me, ciao!\n")
       process.exit();
     default:
-      console.log("Invalid input!");
+      stdout.write("Invalid input!\n");
       break;
   }
 }
