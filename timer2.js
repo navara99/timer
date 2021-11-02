@@ -24,31 +24,31 @@ const beeper = () => {
 const options = (input) => {
   switch (input) {
     case "1":
-
+      setTimer(1);
       break;
     case "2":
-
+      setTimer(2);
       break;
     case "3":
-
+      setTimer(3);
       break;
     case "4":
-
+      setTimer(4);
       break;
     case "5":
-
+      setTimer(5);
       break;
     case "6":
-
+      setTimer(6);
       break;
     case "7":
-
+      setTimer(7);
       break;
     case "8":
-
+      setTimer(8);
       break;
     case "9":
-
+      setTimer(9);
       break;
     case "b":
       beep();
