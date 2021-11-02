@@ -1,6 +1,7 @@
 const timeArr = process.argv.splice(2);
 
 const beeper = (timeArr) => {
+  
   if (timeArr.length === 0) return;
   const validArr = timeArr
     .map((elem) => {
